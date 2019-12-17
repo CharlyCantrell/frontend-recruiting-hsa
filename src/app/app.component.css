@@ -1,0 +1,28 @@
+
+.Buscador {
+    position: absolute;
+    left: 15%;
+    top: 25%;
+}
+input {
+    width: 60%;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    box-sizing: border-box;
+}
+
+.btnSearch  {
+    height: 50%;
+    width: 110px;
+    display: inline-block;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: #BF00FF;
+    vertical-align: bottom;
+}
+

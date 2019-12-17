@@ -1,0 +1,49 @@
+h3 { color: #BF00FF; }
+body {
+    margin: 10; font-family: Roboto, "Helvetica Neue", sans-serif; text-align: left;
+}
+
+input {
+    width: 60%;
+    height: 50px;
+    padding: 12px 20px;
+    margin: 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    box-sizing: border-box;
+}
+
+.btnSearch  {
+    height: 50%;
+    width: 110px;
+    display: inline-block;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: #BF00FF;
+    vertical-align: bottom;
+}
+
+a:link {    
+    text-decoration: none;
+  }
+div.a {
+    font-family: "Century Gothic";
+    font-size: 20px;
+    color: black;
+}
+div.b {
+    font-family: "Century Gothic";
+    font-size: 14px;    
+    color: grey;
+}
+div.c {
+    font-family: "Century Gothic";
+    font-size: 24px;    
+    color: #BF00FF; 
+}
+
+table {
+    border-collapse: none;
+}

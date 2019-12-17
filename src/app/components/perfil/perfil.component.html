@@ -1,0 +1,54 @@
+<body>
+        <table style="width:100%">
+        <tr>
+            <td valign="top" style="width:25%">
+                <img src="../../../assets/Titulo.png" style="height: 3em; width: 15em; vertical-align: bottom;" />
+            </td>
+            <td valign="top" style="width:75%">
+                <input type="text" placeholder="Buscar" #title [(ngModel)]="txtUsuBusqueda" (keyup.enter)="click()">
+                <button type="submit" class="btnSearch"  (click)="click()">
+                    <img class="icon" src="../../../assets/buscar.png" style="width: 100%; height: 100%;">
+                </button>
+            </td>
+        </tr>
+        </table>
+        <table *ngIf="EstConsul" style="width:100%">
+        <tr>
+            <td valign="top" style="width:25%">
+            <div *ngIf="EstConsul" #DivOK>
+                    <a [href]="this.usuario.html_url" target="_blank">
+                        <img *ngIf="usuario.avatar_url != null" [src]="this.usuario.avatar_url" style="width: 10em; height: 10em;">
+                    </a> 
+                    <br>
+                    <a [href]="usuario.html_url" target="_blank">
+                        <div class="a">{{usuario.name}}</div>
+                    </a>                        
+                    <div class="b">{{usuario.login}}</div>
+                    <br><br>
+                    <div class="b">Email: {{usuario.email}}</div>
+                    <div class="b">Seguidores: {{usuario.followers}}</div>
+                    <div class="b">Bio: {{usuario.bio}}</div>
+                </div>                
+            </td>
+            <td style="width: 75%"> 
+                <div *ngFor="let RepoUsuario of currentRepoUsuario">
+                        <a [href]="RepoUsuario.html_url" target="_blank"><div class="c">{{RepoUsuario.name}}</div></a>
+                            <div class="b">{{RepoUsuario.description}}</div>                            
+                            <div class="b"><img src="../../../assets/star.png" style="height: 0.9em; width: 0.9em;" /> 
+                                {{RepoUsuario.stargazers_count}} </div><br>
+                </div> 
+            </td>
+        </tr>
+    </table> 
+    <table *ngIf="Notfnd" align="center">
+        <tr>
+            <td></td>
+            <td>
+                <div *ngIf="Notfnd" #DivNOK  style = "position: absolute; left: 40%; top: 25%;">
+                        <div class="c"> User Not Found :( </div>
+                </div>                  
+            </td>            
+        </tr>
+    </table> 
+    </body>  
+    
